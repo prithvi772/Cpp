@@ -20,8 +20,6 @@ int main(){
 
 }
 
-
-
 #include<iostream>
 using namespace std;
 bool palindrome(string s){
