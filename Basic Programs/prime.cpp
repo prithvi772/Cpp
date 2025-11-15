@@ -1,16 +1,32 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
-int main(){
-    int num;
-    cout<<"Enter number:";
-    cin>>num;
-    
-        if((num%2)!=0){
-            cout<<num<<" is a Prime number.";
 
-        }
-        else{
-            cout<<" Not prime ";
-        }
-    
+bool prime(int n)
+{
+    if(n<=1){
+        cout<<"Not Prime.";
+        return;
+    }
+    for (int i = 2; i <n; i++)
+    {
+        if (n % i == 0)
+        {
+           return false;
+        } 
+    }
+    return true;
+}
+int main()
+{
+    int n;
+    cout << "Enter number:";
+    cin >> n;
+    bool ok= prime(n);
+    if(ok){
+        cout<<"prime";
+    }
+    else{
+        cout<<"not prime";
+    }
+   
 }
